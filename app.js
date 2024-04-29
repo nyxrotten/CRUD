@@ -40,7 +40,11 @@ app.get("/luchadores", (req, res) => {
 
 app.get("/:nombre", (req, res) => {
     const luchadorName = req.params.nombre;
-    const luchador = luchadores.find((luchador) => luchador.nombre.toLocaleLowerCase() === luchadorName)
+    const luchador = luchadores.find((luchador) => luchador.nombre.toLocaleLowerCase() === luchadorName);
+
+    if(!luchador) {
+        return res.status(404).send(`<h1>Luchador no encontrado</h1>`);
+    }
 
     res.json(luchador)
 })
