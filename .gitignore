@@ -11,7 +11,7 @@ node_modules/
 .DS_Store
 .vscode/
 
-# Archivos de configuración específicos del usuario
+# Archivos de configuración específicos del luchador
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
